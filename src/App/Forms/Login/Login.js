@@ -13,6 +13,8 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import './Login.css'
 
+const register = "/register";
+
 export class Login extends React.Component {
     render() {
         return (
@@ -71,7 +73,7 @@ export class Login extends React.Component {
                                         </Link>
                                     </Grid>
                                     <Grid item>
-                                        <Link href="#" variant="body2">
+                                        <Link href={register} variant="body2">
                                             {"Don't have an account? Sign Up"}
                                         </Link>
                                     </Grid>

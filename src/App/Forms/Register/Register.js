@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import { InfoPerson } from './InfoPerson';
 import './Register.css';
 
 export class Register extends React.Component {
@@ -40,13 +41,13 @@ export class Register extends React.Component {
     steps = this.getSteps();
 
     getSteps() {
-        return ['Select master blaster campaign settings', 'Create an ad group', 'Create an ad'];
+        return ['personal information', 'Educational information', 'Revision'];
     }
 
     getStepContent(stepIndex) {
         switch (stepIndex) {
             case 0:
-                return 'Select campaign settings...';
+                return <InfoPerson />;
             case 1:
                 return 'What is an ad group anyways?';
             case 2:
@@ -79,8 +80,8 @@ export class Register extends React.Component {
                                     </div>
                                 ) : (
                                     <div>
-                                        <Typography>{this.getStepContent(this.state.activeStep)}</Typography>
-                                        <div>
+                                        <Typography className="form">{this.getStepContent(this.state.activeStep)}</Typography>
+                                        <div className="buttons">
                                             <Button
                                                 disabled={this.state.activeStep === 0}
                                                 onClick={this.handleBack}

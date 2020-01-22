@@ -9,3 +9,11 @@
     background-size: cover;
     background-position: center;
 }
+
+.form {
+    padding: 2em;
+}
+
+.buttons {
+    padding: 0em 2em;
+}
